@@ -1,3 +1,3 @@
 :HL["/PORTFOLIOTECHWEB/_next/static/chunks/9bb31e5d74584682.css","style"]
-:HL["/PORTFOLIOTECHWEB/_next/static/chunks/6e82124bfdabc5b0.css","style"]
-0:{"buildId":"3thssgvJNWR-71ij9IKZc","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+:HL["/PORTFOLIOTECHWEB/_next/static/chunks/bdb0fea182ec662e.css","style"]
+0:{"buildId":"fsNlJ606XiuSJ9oC3XnjX","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
