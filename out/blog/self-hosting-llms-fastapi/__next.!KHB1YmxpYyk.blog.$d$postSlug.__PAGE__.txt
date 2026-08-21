@@ -1,0 +1,75 @@
+1:"$Sreact.fragment"
+2:I[64517,["/my-portfolio/_next/static/chunks/bfea7af8173e35bd.js","/my-portfolio/_next/static/chunks/1a593ee3bc6e5879.js","/my-portfolio/_next/static/chunks/35a1e421656da4c1.js","/my-portfolio/_next/static/chunks/3ead70381c6fbc00.js","/my-portfolio/_next/static/chunks/a752e26ba01d0c7a.js"],"BlogPostContent"]
+4:I[5721,["/my-portfolio/_next/static/chunks/bca5f9c38c41d6be.js","/my-portfolio/_next/static/chunks/3fdd8e194ce8f5d0.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+3:T647,
+## Why Self-Host?
+
+Self-hosting LLMs gives you complete control over your AI infrastructure:
+- **Privacy**: Data never leaves your servers
+- **Cost**: No per-token charges after initial setup
+- **Customization**: Fine-tune for your specific use case
+
+## Hardware Requirements
+
+For Llama2-7B:
+- 16GB+ RAM
+- NVIDIA GPU with 8GB+ VRAM (or CPU with patience)
+- 50GB disk space
+
+## Setting Up the Environment
+
+```bash
+python -m venv llm-env
+source llm-env/bin/activate
+pip install torch transformers fastapi uvicorn
+```
+
+## Loading the Model
+
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+import torch
+
+model_id = "meta-llama/Llama-2-7b-chat-hf"
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+model = AutoModelForCausalLM.from_pretrained(
+    model_id,
+    torch_dtype=torch.float16,
+    device_map="auto"
+)
+```
+
+## Building the FastAPI Server
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class ChatRequest(BaseModel):
+    message: str
+    max_tokens: int = 256
+
+@app.post("/chat")
+async def chat(request: ChatRequest):
+    inputs = tokenizer(request.message, return_tensors="pt")
+    outputs = model.generate(**inputs, max_new_tokens=request.max_tokens)
+    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    return {"response": response}
+```
+
+## Production Deployment
+
+Use Gunicorn with Uvicorn workers:
+
+```bash
+gunicorn main:app -w 2 -k uvicorn.workers.UvicornWorker
+```
+
+## Conclusion
+
+You now have a private, scalable LLM API. Consider adding rate limiting, authentication, and monitoring for production use.
+    0:{"buildId":"btBDUx_eGcwu5KXYRU8S8","rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Self-Hosting LLMs with FastAPI\",\"description\":\"Running Llama2 locally and building a personal chatbot API for natural language tasks. Complete guide from model setup to production deployment.\",\"image\":\"https://eindev.ir/og-images/self-hosting-llms-fastapi.png\",\"datePublished\":\"2024-10-05T00:00:00.000Z\",\"dateModified\":\"2024-10-05T00:00:00.000Z\",\"author\":{\"@type\":\"Person\",\"name\":\"Ehsan Ghaffar\",\"url\":\"https://github.com/yashraj-personal\"},\"publisher\":{\"@type\":\"Person\",\"name\":\"Yash Raj\",\"url\":\"https://yashraj.dev\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://eindev.ir/blog/self-hosting-llms-fastapi\"},\"articleSection\":\"ai\",\"keywords\":\"llm, python, fastapi\",\"timeRequired\":\"15 min read\"}"}}],["$","div",null,{"children":["$","$L2",null,{"post":{"id":4,"slug":"self-hosting-llms-fastapi","title":"Self-Hosting LLMs with FastAPI","excerpt":"Running Llama2 locally and building a personal chatbot API for natural language tasks. Complete guide from model setup to production deployment.","content":"$3","date":"Oct 5, 2024","readTime":"15 min read","category":"ai","tags":["llm","python","fastapi"],"author":{"name":"Ehsan Ghaffar","avatar":"/developer-portrait.png","role":"Software Engineer"},"featured":false,"color":"from-orange-500/20 to-amber-500/20"}}]}]],[["$","script","script-0",{"src":"/my-portfolio/_next/static/chunks/a752e26ba01d0c7a.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+6:null
