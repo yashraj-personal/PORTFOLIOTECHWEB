@@ -64,8 +64,8 @@ export function HeroSection() {
             </div>
 
             <p className="max-w-lg text-base sm:text-lg leading-relaxed text-muted-foreground animate-fade-in-up stagger-2">
-              {"Breaking systems to understand them, building defenses to protect them. "}I&apos;m Yash Raj, a Class 12 student
-              from Gaya, Bihar, exploring{" "}
+              {"Breaking systems to understand them, building defenses to protect them. "}Class 12 student (PCM +
+              Computer Science) from Gaya, Bihar, working across{" "}
               <span className="text-foreground font-medium">cybersecurity and applied machine learning</span>. Not a
               portfolio. A lab notebook.
             </p>
@@ -123,9 +123,6 @@ export function HeroSection() {
 > location
   gaya, bihar, in
 
-> name
-  yash_raj
-
 > role
   cybersecurity enthusiast
 
@@ -145,7 +142,7 @@ export function HeroSection() {
               className="absolute -bottom-3 sm:-bottom-6 -left-2 sm:-left-6 rounded-lg border border-border bg-card glass px-3 sm:px-4 py-1.5 font-mono text-[11px] sm:text-xs text-muted-foreground animate-float"
               style={{ animationDelay: "1s" }}
             >
-              class 12 student
+              class 12 · pcm + cs
             </div>
 
             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full bg-primary/5 blur-3xl" />

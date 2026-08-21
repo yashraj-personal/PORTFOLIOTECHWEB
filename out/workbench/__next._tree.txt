@@ -1,6 +1,5 @@
-:HL["/PORTFOLIOTECHWEB/_next/static/chunks/9bb31e5d74584682.css","style"]
-:HL["/PORTFOLIOTECHWEB/_next/static/chunks/6e82124bfdabc5b0.css","style"]
+:HL["/PORTFOLIOTECHWEB/_next/static/chunks/6ca98c01a19aa96f.css","style"]
 :HL["/PORTFOLIOTECHWEB/_next/static/media/0c89a48fa5027cee-s.p.4564287c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/PORTFOLIOTECHWEB/_next/static/media/797e433ab948586e-s.p.29207c2f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/PORTFOLIOTECHWEB/_next/static/media/caa3a2e1cccd8315-s.p.3b6cae6d.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"buildId":"3thssgvJNWR-71ij9IKZc","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"(public)","paramType":null,"paramKey":"(public)","hasRuntimePrefetch":false,"slots":{"children":{"name":"workbench","paramType":null,"paramKey":"workbench","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"K5XrT-L7ol4LSYeOP0Nfp","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"(public)","paramType":null,"paramKey":"(public)","hasRuntimePrefetch":false,"slots":{"children":{"name":"workbench","paramType":null,"paramKey":"workbench","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

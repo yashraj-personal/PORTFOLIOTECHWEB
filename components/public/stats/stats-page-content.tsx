@@ -55,7 +55,7 @@ const timeline = [
     id: 2,
     year: "2025",
     title: "Scored 89% in Secondary School (CBSE)",
-    detail: "Continued into Class 12 while building a stronger focus on technology and cybersecurity.",
+    detail: "Moved into Class 12 with PCM + Computer Science.",
     icon: GraduationCap,
   },
   {
@@ -178,7 +178,7 @@ export function StatsPageContent() {
               </span>
               <span className="flex items-center gap-1.5">
                 <GraduationCap className="h-3.5 w-3.5 text-primary" />
-                Class 12 student
+                Class 12 · PCM + CS (CBSE)
               </span>
               <a
                 href="tel:+919060170251"
