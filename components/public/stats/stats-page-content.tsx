@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import { portfolioImages } from "@/lib/asset-path"
 import { cn } from "@/lib/utils"
 import {
   Trophy,
@@ -160,7 +161,7 @@ export function StatsPageContent() {
         {/* Profile header */}
         <div className="mb-12 flex flex-col items-center gap-6 text-center sm:mb-16 sm:flex-row sm:items-start sm:gap-8 sm:text-left animate-fade-in-up">
           <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border-2 border-primary/40 sm:h-32 sm:w-32">
-            <Image src="/images/yash-raj.jpg" alt="Portrait of Yash Raj" fill sizes="128px" className="object-cover" />
+            <Image src={portfolioImages.portrait} alt="Portrait of Yash Raj" fill sizes="128px" className="object-cover" />
           </div>
           <div className="space-y-3">
             <p className="font-mono text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em] text-primary">

@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { portfolioImages } from "@/lib/asset-path"
 import { useEffect, useState } from "react"
 
 const roles = [
@@ -107,7 +108,7 @@ export function HeroSection() {
               <div className="mt-8 flex flex-col items-center gap-5 sm:flex-row sm:items-start sm:gap-6">
                 <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl border border-primary/30 sm:h-28 sm:w-28">
                   <Image
-                    src="/images/yash-raj.jpg"
+                    src={portfolioImages.portrait}
                     alt="Portrait of Yash Raj"
                     fill
                     sizes="112px"
