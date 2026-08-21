@@ -97,9 +97,14 @@ export function Footer() {
             ))}
           </div>
 
-          <p className="font-mono text-xs text-muted-foreground text-center sm:text-right">
-            © {new Date().getFullYear()} Yash Raj — All experiments reserved
-          </p>
+          <div className="flex flex-col items-center gap-2 text-center sm:items-end sm:text-right">
+            <p className="font-mono text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Yash Raj — All experiments reserved
+            </p>
+            <p className="font-mono text-[11px] tracking-wide text-muted-foreground/70">
+              Made by Yash Raj
+            </p>
+          </div>
         </div>
       </div>
     </footer>
