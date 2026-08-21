@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { CursorGlow } from "@/components/cursor-glow"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { TechMarquee } from "@/components/tech-marquee"
+import { ThreeBackground } from "@/components/three-background"
 import { generateWebsiteStructuredData, generatePersonStructuredData } from "@/lib/structured-data"
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       />
       <main className="relative min-h-screen overflow-hidden scanlines">
         <CursorGlow />
+        <ThreeBackground />
 
         {/* Animated aurora glows in the background */}
         <div className="pointer-events-none absolute inset-0 -z-0 overflow-hidden" aria-hidden="true">
