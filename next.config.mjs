@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 
-// If you deploy to https://<username>.github.io/<repo-name>/ (a project page),
-// set this to your repo name so all links/assets resolve correctly.
-// If you deploy to https://<username>.github.io/ (a user/org page), leave it as "".
-const repoName = "my-portfolio" // <-- change this to your GitHub repo name
 const isGithubPages = process.env.GITHUB_PAGES === "true"
+
+// Auto-detect the repo name from the GitHub Actions environment.
+// GITHUB_REPOSITORY is "owner/repo" during CI, so we grab the "repo" part.
+// This means links/assets resolve correctly no matter what your repo is named.
+// If your repo IS a user/org page (named "<username>.github.io"), it is served
+// from the root, so we leave the basePath empty in that case.
+const ghRepo = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? ""
+const isUserPage = ghRepo.endsWith(".github.io")
+const repoName = isUserPage ? "" : ghRepo
 
 const nextConfig = {
   typescript: {
@@ -14,8 +19,8 @@ const nextConfig = {
     unoptimized: true,
   },
   output: "export",
-  basePath: isGithubPages ? `/${repoName}` : "",
-  assetPrefix: isGithubPages ? `/${repoName}/` : "",
+  basePath: isGithubPages && repoName ? `/${repoName}` : "",
+  assetPrefix: isGithubPages && repoName ? `/${repoName}/` : "",
 }
 
 export default nextConfig
