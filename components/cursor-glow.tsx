@@ -50,15 +50,20 @@ export function CursorGlow() {
         }}
       />
       <div
-        className="hidden lg:block pointer-events-none fixed w-8 h-8 rounded-full mix-blend-screen"
+        className="custom-cursor-ring hidden lg:block"
         style={{
           left: position.x,
           top: position.y,
-          transform: "translate(-50%, -50%)",
-          background: "radial-gradient(circle, var(--primary) 0%, transparent 70%)",
-          opacity: isVisible ? 0.15 : 0,
-          transition: "opacity 0.2s ease",
-          filter: "blur(4px)",
+          opacity: isVisible ? 1 : 0,
+          transform: `translate(-50%, -50%) scale(${isHovering ? 1.45 : 1})`,
+        }}
+      />
+      <div
+        className="custom-cursor-dot hidden lg:block"
+        style={{
+          left: position.x,
+          top: position.y,
+          opacity: isVisible ? 1 : 0,
         }}
       />
     </>

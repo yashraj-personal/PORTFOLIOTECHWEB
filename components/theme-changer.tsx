@@ -119,6 +119,7 @@ export function ThemeChanger() {
     purple: "bg-gradient-to-br from-purple-400 to-violet-600",
     emerald: "bg-gradient-to-br from-emerald-400 to-green-600",
     rose: "bg-gradient-to-br from-rose-400 to-pink-600",
+    pink: "bg-gradient-to-br from-pink-400 to-fuchsia-600",
   }
 
   return (

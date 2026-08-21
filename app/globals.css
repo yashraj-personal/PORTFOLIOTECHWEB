@@ -133,6 +133,44 @@
 }
 
 /* Enhanced cursor glow with smoother gradient */
+.custom-cursor-ring,
+.custom-cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  z-index: 200;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 18px var(--glow-color-strong), inset 0 0 10px var(--glow-color);
+}
+
+.custom-cursor-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--primary);
+  box-shadow: 0 0 12px var(--primary);
+}
+
+@media (pointer: fine) and (min-width: 1024px) {
+  body:has(.custom-cursor-ring) {
+    cursor: none;
+  }
+  a,
+  button,
+  [role="button"],
+  input,
+  textarea,
+  select {
+    cursor: none;
+  }
+}
+
 .cursor-glow {
   pointer-events: none;
   position: fixed;
