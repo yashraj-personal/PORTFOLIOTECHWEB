@@ -9,6 +9,7 @@ import { ThemeToggle } from "./theme-toggle"
 import { ThemeChanger } from "./theme-changer"
 import Link from "next/link"
 import Image from "next/image"
+import { portfolioImages } from "@/lib/asset-path"
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -56,7 +57,7 @@ export function Header() {
           <Link href="/" className="group flex items-center gap-3">
             <div className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full ring-1 ring-primary/40 transition-all duration-400 group-hover:ring-primary group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/30">
               <Image
-                src="/images/logo-orb.jpg"
+                src={portfolioImages.logo}
                 alt="Yash Raj logo"
                 fill
                 sizes="36px"
@@ -141,7 +142,7 @@ export function Header() {
               )}
             >
               <Image
-                src="/images/butcher-pfp.png"
+                src={portfolioImages.stats}
                 alt="Open profile stats"
                 fill
                 sizes="36px"
@@ -209,7 +210,7 @@ export function Header() {
                 aria-label="View profile stats"
                 className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-border/70"
               >
-                <Image src="/images/butcher-pfp.png" alt="Open profile stats" fill sizes="44px" className="object-cover" />
+                <Image src={portfolioImages.stats} alt="Open profile stats" fill sizes="44px" className="object-cover" />
               </Link>
               {socialLinks.map((link) => (
                 <a

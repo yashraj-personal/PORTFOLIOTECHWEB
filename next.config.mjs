@@ -21,6 +21,9 @@ const nextConfig = {
   output: "export",
   basePath: isGithubPages && repoName ? `/${repoName}` : "",
   assetPrefix: isGithubPages && repoName ? `/${repoName}/` : "",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGithubPages && repoName ? `/${repoName}` : "",
+  },
 }
 
 export default nextConfig
